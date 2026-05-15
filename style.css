@@ -1,18 +1,43 @@
 /* ── Reset & base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--text);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius) var(--radius);
+  text-decoration: none;
+}
+.skip-link:focus { top: 0; }
+
+/* ── Focus styles ── */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 :root {
-  --cream:    #fdf8f3;
-  --warm-100: #f5ede0;
-  --warm-200: #e8d5bb;
-  --warm-600: #9a7a56;
-  --warm-700: #7a5c38;
-  --text:     #2d2319;
-  --muted:    #7a6a58;
-  --accent:   #c0622f;
-  --accent-h: #a3501f;
-  --radius:   12px;
-  --max-w:    720px;
+  --cream:       #fdf8f3;
+  --warm-100:    #f5ede0;
+  --warm-200:    #e8d5bb;
+  --warm-600:    #9a7a56;
+  --warm-700:    #7a5c38;
+  --text:        #2d2319;
+  --muted:       #7a6a58;
+  --accent:      #c0622f;
+  --accent-h:    #a3501f;
+  --accent-text: #a3501f; /* darkened for 4.5:1 on light backgrounds */
+  --radius:      12px;
+  --max-w:       720px;
 }
 
 html { scroll-behavior: smooth; }
@@ -93,7 +118,7 @@ a:hover { text-decoration: underline; }
 
 .tagline {
   font-size: 1.1rem;
-  color: var(--accent);
+  color: var(--accent-text);
   font-weight: 500;
 }
 
@@ -206,7 +231,7 @@ a:hover { text-decoration: underline; }
 .project-tagline {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 0.6rem;
 }
 
@@ -266,3 +291,16 @@ a:hover { text-decoration: underline; }
   .hero { padding: 3.5rem 1.25rem 3rem; }
   .section { padding: 3.5rem 1.25rem; }
 }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ── Scroll margin for sticky nav (~64px tall) ── */
+[id] { scroll-margin-top: 80px; }
