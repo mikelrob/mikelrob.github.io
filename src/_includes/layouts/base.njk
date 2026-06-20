@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+  {% set pageTitle = title or site.name %}
+  {% set pageDescription = description or site.description %}
+  {% set canonicalUrl = page.url | absoluteUrl(site.url) %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ pageDescription | escape }}" />
+  <title>{% if pageTitle == site.name %}{{ site.name }}{% else %}{{ pageTitle }} | {{ site.name }}{% endif %}</title>
+  <link rel="canonical" href="{{ canonicalUrl }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} software blog" href="{{ "/feed.xml" | absoluteUrl(site.url) }}" />
+  <meta property="og:title" content="{{ pageTitle | escape }}" />
+  <meta property="og:description" content="{{ pageDescription | escape }}" />
+  <meta property="og:type" content="{{ ogType or 'website' }}" />
+  <meta property="og:url" content="{{ canonicalUrl }}" />
+  <meta property="og:site_name" content="{{ site.name }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ pageTitle | escape }}" />
+  <meta name="twitter:description" content="{{ pageDescription | escape }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ site.umamiWebsiteId }}"></script>
+  <script defer src="/analytics.js"></script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  {% include "nav.njk" %}
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+</body>
+</html>

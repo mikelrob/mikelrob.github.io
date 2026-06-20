@@ -1,0 +1,15 @@
+{
+  "name": "mikerobinson-me",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal website and software blog for Mike Robinson.",
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('_site', { recursive: true, force: true })\"",
+    "dev": "eleventy --serve",
+    "build": "npm run clean && eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.4"
+  }
+}

@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: "/tags/{{ tag | slugify }}/"
+eleventyComputed:
+  title: "Posts tagged {{ tag }}"
+  description: "Software blog posts tagged {{ tag }} by Mike Robinson."
+nav: blog
+---
+<section class="section tag-index">
+  <div class="container">
+    <a class="back-link" href="/tags/" data-umami-event="Back To Tags Click">&larr; All tags</a>
+    <h1>Posts tagged {{ tag }}</h1>
+    <p class="section-intro">Software blog posts filed under {{ tag }}.</p>
+
+    {% set taggedPosts = collections[tag] | sortByDateDesc %}
+    <div class="blog-list">
+      {% for post in taggedPosts %}
+        <article class="blog-card">
+          <p class="post-meta"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
+          <h2><a href="{{ post.url }}" data-umami-event="Tag Post Click">{{ post.data.title }}</a></h2>
+          <p class="blog-card-desc">{{ post.data.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+title: Tags
+description: Browse software blog posts by topic.
+permalink: /tags/
+nav: blog
+---
+<section class="section tag-index">
+  <div class="container">
+    <h1>Tags</h1>
+    <p class="section-intro">Browse blog posts by topic.</p>
+
+    {% if collections.tagList.length %}
+      <div class="tag-cloud">
+        {% for tag in collections.tagList %}
+          <a class="tag tag-pill" href="{{ tag | tagUrl }}">{{ tag }} <span>{{ collections[tag] | length }}</span></a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="section-intro">No tags yet.</p>
+    {% endif %}
+  </div>
+</section>

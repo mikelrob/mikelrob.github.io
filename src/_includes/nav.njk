@@ -1,0 +1,8 @@
+<header class="nav">
+  <a href="/" class="nav-logo" aria-label="Mike Robinson - home">MR</a>
+  <nav aria-label="Main">
+    <a href="/#about">About</a>
+    <a href="/blog/"{% if nav == "blog" %} aria-current="page"{% endif %} data-umami-event="Blog Nav Click">Blog</a>
+    <a href="/#projects">Projects</a>
+  </nav>
+</header>

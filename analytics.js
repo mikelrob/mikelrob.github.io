@@ -25,6 +25,7 @@
 
   const sections = [
     { id: 'about', label: 'Reached About' },
+    { id: 'writing', label: 'Reached Latest Writing' },
     { id: 'projects', label: 'Reached Projects' },
   ];
 

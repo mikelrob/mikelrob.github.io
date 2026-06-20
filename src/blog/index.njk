@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+title: Software blog
+description: Notes on software, iOS, macOS, Python, indie apps, and building useful products.
+permalink: /blog/
+nav: blog
+---
+<section class="section blog-index">
+  <div class="container">
+    <div class="section-heading-row">
+      <div>
+        <h1>Software blog</h1>
+        <p class="section-intro">Notes on software, iOS, macOS, Python, indie apps, and building useful products.</p>
+      </div>
+      <a class="section-link" href="/feed.xml" data-umami-event="RSS Feed Click">RSS</a>
+    </div>
+
+    {% if collections.posts.length %}
+      <div class="blog-list">
+        {% for post in collections.posts %}
+          <article class="blog-card">
+            <p class="post-meta"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
+            <h2><a href="{{ post.url }}" data-umami-event="Blog Post Click">{{ post.data.title }}</a></h2>
+            <p class="blog-card-desc">{{ post.data.description }}</p>
+            {% if post.data.tags %}
+              <ul class="tag-list" aria-label="Post tags">
+                {% for tag in post.data.tags %}
+                  <li><a class="tag" href="{{ tag | tagUrl }}">{{ tag }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="section-intro">No posts yet.</p>
+    {% endif %}
+  </div>
+</section>
