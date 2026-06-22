@@ -1,7 +1,7 @@
 ---
 title: "Advanced SwiftUI Preferences: measuring without coupling"
 description: "How PreferenceKey and anchors can coordinate layout across child views while keeping containers and descendants independent."
-date: 2026-06-13
+date: 2026-06-06
 tags:
   - SwiftUI
   - iOS
@@ -84,4 +84,4 @@ Preferences are not just a workaround for missing APIs. They are one of SwiftUI'
 
 Environment sends context down. Preferences send derived information up. Together they let containers and children cooperate without knowing too much about each other.
 
-Next week I want to cover a related pattern that is even easier to miss: custom actions. SwiftUI uses values like `OpenURLAction` to let views request behavior from their environment without hard-coding who performs it.
+Next week I want to cover the part of preferences that is easy to miss: transforming values as they move through intermediate containers.

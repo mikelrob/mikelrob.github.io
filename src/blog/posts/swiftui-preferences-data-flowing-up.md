@@ -1,7 +1,7 @@
 ---
 title: "SwiftUI Preferences: data flowing up the tree"
 description: "PreferenceKey is SwiftUI's answer for child views reporting layout and semantic information back to ancestors without tight coupling."
-date: 2026-06-06
+date: 2026-05-30
 tags:
   - SwiftUI
   - iOS
