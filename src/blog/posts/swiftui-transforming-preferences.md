@@ -1,7 +1,7 @@
 ---
 title: "SwiftUI Preferences: transforming values on the way up"
 description: "transformPreference lets intermediate containers rewrite, filter, or annotate child preference values before ancestors read them."
-date: 2026-06-13
+date: 2026-06-06
 tags:
   - SwiftUI
   - iOS
@@ -127,4 +127,4 @@ Children contribute values. Siblings reduce into a combined value. Intermediate 
 
 That model makes advanced preference code easier to design. Instead of asking "How does this child tell that parent something?", ask "What value should this subtree contribute, and which containers are responsible for shaping it?"
 
-Next week I want to move from preferences back to the environment and look at custom actions: APIs that feel like SwiftUI's `OpenURLAction`.
+Next week I want to look at a newer sibling idea: `ContainerValues`, where children give metadata directly to custom containers.
