@@ -1,7 +1,7 @@
 ---
 title: "Custom SwiftUI actions: APIs that feel like OpenURLAction"
 description: "OpenURLAction shows a useful SwiftUI pattern: pass behavior through the environment so views can request work without owning the implementation."
-date: 2026-06-20
+date: 2026-06-22
 tags:
   - SwiftUI
   - iOS

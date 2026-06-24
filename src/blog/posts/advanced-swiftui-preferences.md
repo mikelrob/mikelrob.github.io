@@ -1,7 +1,7 @@
 ---
 title: "Advanced SwiftUI Preferences: measuring without coupling"
 description: "How PreferenceKey and anchors can coordinate layout across child views while keeping containers and descendants independent."
-date: 2026-05-30
+date: 2026-06-01
 tags:
   - SwiftUI
   - iOS

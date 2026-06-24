@@ -1,7 +1,7 @@
 ---
 title: "SwiftUI Environment: values, not globals"
 description: "A practical way to think about SwiftUI's Environment as contextual data that keeps view APIs small without becoming hidden global state."
-date: 2026-05-16
+date: 2026-05-18
 tags:
   - SwiftUI
   - iOS

@@ -1,7 +1,7 @@
 ---
 title: "SwiftUI ContainerValues: metadata for custom containers"
 description: "ContainerValues let child views give local metadata to a custom container without sending it all the way up the view tree."
-date: 2026-06-13
+date: 2026-06-15
 tags:
   - SwiftUI
   - iOS

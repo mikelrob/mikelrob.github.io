@@ -1,7 +1,7 @@
 ---
 title: "SwiftUI Preferences: transforming values on the way up"
 description: "transformPreference lets intermediate containers rewrite, filter, or annotate child preference values before ancestors read them."
-date: 2026-06-06
+date: 2026-06-08
 tags:
   - SwiftUI
   - iOS
