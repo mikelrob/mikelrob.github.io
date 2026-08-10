@@ -260,6 +260,18 @@ a:hover { text-decoration: underline; }
 }
 .app-store-btn[href="#"] { display: none; }
 
+.brew-btn {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.brew-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
 /* ── App icon ── */
 .app-icon {
   width: 44px;
