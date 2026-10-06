@@ -260,6 +260,16 @@ a:hover { text-decoration: underline; }
 }
 .app-store-btn[href="#"] { display: none; }
 
+.app-store-badge-link {
+  display: inline-block;
+  line-height: 0;
+}
+.app-store-badge {
+  display: block;
+  width: 120px;
+  height: 40px;
+}
+
 .brew-btn {
   font-family: inherit;
   border: none;
