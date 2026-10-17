@@ -242,6 +242,13 @@ a:hover { text-decoration: underline; }
   line-height: 1.65;
 }
 
+.project-release {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-text);
+  margin-bottom: 1.1rem;
+}
+
 .app-store-btn {
   display: inline-flex;
   align-items: center;
