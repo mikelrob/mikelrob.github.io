@@ -243,10 +243,9 @@ a:hover { text-decoration: underline; }
 }
 
 .project-release {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--accent-text);
-  margin-bottom: 1.1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
 }
 
 .app-store-btn {
@@ -273,7 +272,7 @@ a:hover { text-decoration: underline; }
 }
 .app-store-badge {
   display: block;
-  width: 120px;
+  width: auto;
   height: 40px;
 }
 
